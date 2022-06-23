@@ -8,4 +8,14 @@
 1. Runs the flask application inside gunicorn
   
 
+python3 --version
+apt-get update 
+sudo apt-get -y install python3-pip
+pip3 --version
+python3 app.py
+
+
+http://34.105.75.10:5000/
+
+
 # sample-pythonclient-master
