@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample-pythonclient-master
+spec:
+  selector:
+    matchLabels:
+      app: sample-pythonclient
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: sample-pythonclient
+    spec:
+      containers:
+      - name: sample-pythonclient-container
+        image: cinnyabraham06/python-docker:v1
+        #env:
+        #  - name: SERVER
+        #    value: 'http://sample-pythonclient-master:5000'
+        resources:
+          requests:
+            memory: "32Mi"
+            cpu: "100m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 8080

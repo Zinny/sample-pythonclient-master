@@ -19,4 +19,12 @@ python3 app.py
 http://34.105.75.10:5000/
 
 
+Kubernetes: troubleshooting ingress and services traffic flows
+https://medium.com/@ManagedKube/kubernetes-troubleshooting-ingress-and-services-traffic-flows-547ea867b120
+
+Internet ←-> AWS ELB ←-> k8s ingress ←-> k8s service ←-> k8s pods
+
+kubectl logs PODNAME
+kubectl describe service SERVICENAME
+
 # sample-pythonclient-master
